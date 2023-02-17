@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadwdby4701-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadwdby4701-tenant-component
+    app.kubernetes.io/part-of: loadwdby4701-tenant-app
+  name: loadwdby4701-tenant-component
+  namespace: loadwdby4701-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadwdby4701-tenant-component
+    weight: null
+status: {}
